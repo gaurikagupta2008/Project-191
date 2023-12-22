@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Particle System Component Example
+        </title>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="https://unpkg.com/aframe-spe-particles-component@^1.0.4/dist/aframe-spe-particles-component.min.js"></script>
+    </head>
+    <body>
+        <a-scene id="scene">
+            <a-entity position="0 7 0" spe-particles="
+              color: #B6CEC7, #86A3C3, #7268A6, #6B3074; 
+              distribution: sphere; 
+              randomize-velocity: true; 
+              radius: 1; 
+              particle-count: 800; 
+              velocity: 1; 
+              velocity-spread: 15; 
+              drag: 1; 
+              max-age: 2; 
+              duration: -1, 
+              blending: additive; 
+              active-multiplier: 1000; 
+              size: 1, 1, 1, 0">
+            </a-entity>
+            <a-entity position="25 12 0" spe-particles="
+              color: #003049, #D62828, #F77F00, #FCBF49; 
+              distribution: sphere; 
+              randomize-velocity: true; 
+              radius: 1; 
+              particle-count: 800; 
+              velocity: 1; 
+              velocity-spread: 15; 
+              drag: 1; 
+              max-age: 2; 
+              duration: -1, 
+              blending: additive; 
+              active-multiplier: 1000; 
+              size: 1, 1, 1, 0">
+            </a-entity>
+            <a-entity position="-25 12 0" spe-particles="
+              color: #B9375E, #CEDDBB, #BE9A60, #FFE0E9; 
+              distribution: sphere; 
+              randomize-velocity: true; 
+              radius: 1; 
+              particle-count: 800; 
+              velocity: 1; 
+              velocity-spread: 15; 
+              drag: 1; 
+              max-age: 2; 
+              duration: -1, 
+              blending: additive; 
+              active-multiplier: 1000; 
+              size: 1, 1, 1, 0">
+            </a-entity>
+        <a-sky color="#000000"></a-sky>
+        <a-camera position="0 0 30"></a-camera>
+
+        <a-assets>
+          <a-asset-item id="tree-model" src="./christmas_tree/scene.gltf"></a-asset-item>
+        </a-assets>
+        
+        <a-assets>
+          <a-asset-item id="santa-model" src="./santa/scene.gltf"></a-asset-item>
+        </a-assets>
+
+        <a-assets>
+          <a-asset-item id="snowman-model" src="./snowman/scene.gltf"></a-asset-item>
+        </a-assets>
+
+        <a-assets>
+          <a-asset-item id="reindeer-model" src="./reindeer/scene.gltf"></a-asset-item>
+        </a-assets>
+
+        <a-entity id="tree-3D-model" position="-22 -17 0.1" scale="0.05 0.05 0.05" gltf-model="#tree-model" gesture-handler>
+        </a-entity>
+
+        <a-entity id="santa-3D-model" position="22 -17 0.1" scale="5 5 5" gltf-model="#santa-model" gesture-handler>
+        </a-entity>
+
+        <a-entity id="snowman-3D-model" position="-40 -17 0.1" scale="15 15 15" gltf-model="#snowman-model" gesture-handler>
+        </a-entity>
+
+        <a-entity id="reindeer-3D-model" position="0 -10 0.05" rotation="0 90 0" scale="0.9 0.9 0.9" gltf-model="#reindeer-model" gesture-handler>
+        </a-entity>
+      </a-scene>
+    </body>
+</html>
